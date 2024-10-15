@@ -1,0 +1,732 @@
+.jumbotron,
+.card-body,
+.container,
+.site-header {
+  font-family: 'Verdana', serif !important;
+}
+
+.jumbotron .display-4 {
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.nav,
+.nav_item,
+.login-button {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+.login-button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  padding: 6px 24px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+}
+
+.container-popup {
+  /* top: 50%;
+  left: 50%;
+  transform-origin: translate(-50%,-50%);
+  transform: center; */
+  position: relative;
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+/* /////////////BLOQUE CSS PARA POP UP LOG IN///////////////// */
+
+/* .login-button-ckbox {
+  display: none;
+  position: absolute;
+} */
+
+.center-login-box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.1s ease-out;
+  /* transform: translate(-50%,-50%) scale(1); */
+
+}
+
+.login-button-ckbox {
+  display: none;
+}
+
+.container-popup {
+  display: none;
+  scale: 0;
+  opacity: 0;
+  z-index: -1;
+  background: #fff;
+  width: 410px;
+  padding: 30px;
+  border-radius: 3%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50% 0 0 -50%;
+  transform: translate(-175%, 25%);
+}
+
+#show:checked~.container-popup {
+  display: block;
+  scale: 1;
+  opacity: 1;
+  z-index: 11;
+}
+
+.container-popup .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.container-popup .close-btn:hover {
+  color: #3498db;
+}
+
+.container-popup .text {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container-popup form {
+  margin-top: -20px;
+  transition: all 0.7s ease;
+}
+
+.container-popup form .data-login {
+  height: 45px;
+  width: 100%;
+  margin: 40px 0;
+}
+
+form .data-login label {
+  font-size: 18px;
+}
+
+form .data-login input {
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid silver;
+}
+
+form .data-login input:focus {
+  border-color: #3498db;
+  border-bottom-width: 2px;
+  animation: barfill 2s ease 0s infinite;
+}
+
+form .forgot-pass {
+  margin-top: -8px;
+}
+
+form .forgot-pass a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+form .forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+form .btn-login {
+  height: 45px;
+  margin: 30px 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+}
+
+form .btn-login .inner-login {
+  height: 100%;
+  width: 100%;
+  position: center;
+  left: -100%;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+form .btn-login:hover .inner-login {
+  left: 0;
+}
+
+form .btn-login button {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  background: #11131e;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 10px;
+  /* overflow: visible;
+  transform: scale(0.98); */
+}
+
+form .signup-link-login a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+form .signup-link-login a:hover {
+  text-decoration: underline;
+}
+
+@keyframes barfill {
+  from {
+    border-bottom-width: 1px;
+  }
+
+  to {
+    border-bottom-width: 100%;
+  }
+}
+
+/*////////FIN BLOQE CSS POP UP LOG IN//////////// */
+
+/* -------- CSS SEARCH BAR --------- */
+
+/*ESTILO PARA LA BARRA DE BUSQUEDA MARIANA*/
+/* .barrabuscar{
+  position: absolute;
+  padding: 5px;
+  display: flex;
+}
+.barrabuscar input{
+  width: 0px;
+  height: 30px;
+  padding: 0 15px;
+  font-size: 18px;
+  color: #f8f8f8;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  transition: all 0.6s ease;
+}
+.barrabuscar:hover input{
+  width: 200px;
+}
+
+.barrabuscar input:focus{
+  width: 200px;
+} */
+/*ESTILO PARA EL BOTTONBUSQUEDA MARIANA*/
+
+/* .btnbusqueda-barrabuscar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f8f8f8 ;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #222;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+} */
+
+::placeholder { 
+  color: silver;
+  opacity: 1;
+}
+
+/* -------- CSS SEARCH BAR --------- */
+
+
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  --webkit-user-select: none;
+  --moz-user-select: none;
+  --ms-user-select: none;
+  --user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.jumbotron {
+  height: 50vh;
+  padding: 5em inherit;
+  margin-bottom: 0;
+  background-color: #53C0FB;
+  background: url('../img/cover_back.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px grey;
+}
+
+.jumbotron .lead {
+  font-size: 38px;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+
+.site-header a {
+  color: white;
+  transition: ease-in-out color .15s;
+}
+
+.site-header .dropdown-menu a {
+  color: black;
+}
+
+.dropzone {
+  border: 2px dashed #0087F7;
+  border-radius: 5px;
+  background: white;
+}
+
+.img-fit {
+  max-height: 100%;
+}
+
+.alert {
+  position: fixed;
+  top: 80px;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  left: 50%;
+}
+
+.cursor-active {
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+#spinner-wrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1021;
+  display: none;
+}
+
+main {
+  min-height: calc(100vh - 210px);
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.checked {
+  color: orange;
+}
+
+
+.alert {
+  position: fixed;
+  top: 80px;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#mensaje {
+  display: none;
+  background: #222;
+  color: #f8f8f8;
+  position: absolute;
+  padding: 18px 0px 0px 18px;
+  width: 280px;
+  height: 180px;
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: 5px;
+}
+
+#mensaje h3 {
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+#mensaje p {
+  padding-left: 10px;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  margin: 5px;
+
+}
+
+/*Esto le agrega color verde al texto y un tick cuando
+las condiciones de la contraseña son correctas*/
+p.valid {
+  color: rgb(18, 201, 43);
+}
+
+.valid:before {
+  position: relative;
+  right: 10px;
+  content: "✔";
+}
+
+/*Esto le agrega color rojo al texto y una cruz cuando la
+contraseña no cumple una condición */
+
+p.invalid {
+  color: rgb(221, 52, 22);
+}
+
+.invalid:before {
+  position: relative;
+  right: 10px;
+  content: "❌";
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-signIn {
+
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background-color: #f8f8f8;
+  margin-top: 100px;
+  width: 90%;
+  padding: 30px;
+  max-width: 780px;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+
+}
+
+#container-signIn h1 {
+
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.pie-pagina {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pie-pagina p {
+
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-top: 1px;
+
+}
+
+.container-footer {
+  margin-top: 110px;
+}
+
+.form-control,
+.form-check-input {
+
+  margin-top: 20px;
+}
+
+.form-check-label {
+
+  margin-top: 14px;
+}
+
+#regBtn {
+
+  width: 100%;
+  background-color: #222;
+  color: #f8f8f8;
+  border: #222;
+  margin-top: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid #222;
+}
+
+
+
+#regBtn:hover {
+  background-color: #f8f8f8;
+  color: #222;
+}
+
+/*ESTILO PARA LOS OJOS*/
+
+
+#ojito2 {
+
+  background-color: #f8f8f8;
+  color: #222;
+  border: none;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#ojito2:hover {
+  font-size: 22px;
+}
+
+#ojito1 {
+  background-color: #f8f8f8;
+  color: #222;
+  border: none;
+}
+
+#ojito1:hover {
+  font-size: 22px;
+}
+
+
+.form-control {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1.3px solid #222;
+  background: none;
+}
+
+
+input:focus {
+  outline: #000408;
+  background: none;
+}
+/* FINAL ESTILO FORM*/
+
+/* INICIO ESTILOS BUSCADOR PRODUCTOS */
+
+#search-container-producto {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#search-input-producto{
+  margin: 10px;
+  padding: 5px;
+  width: 300px;
+  height: 40px;
+}
+
+#search-results-producto {
+  margin-top: 20px;
+  
+}
+/* FIN ESTILOS BUSCADOR PRODUCTOS */
+
+/*INICIO ESTILO PRODUCT AUTO*/
+.imagenProductos {
+  width: 20vw;
+  float: left;
+  margin-right: 4%;
+}
+
+.containerProductos {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerProductos h4 {
+  text-align: center;
+}
+
+.lista-productos {
+  text-align: justify;
+  color: rgb(84, 84, 84);
+}
+
+.subtitulo4 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  letter-spacing: 0.75vw;
+  font-size: 220%;
+}
+
+.subtitulo5 {
+  text-align: center;
+  color: rgb(58, 58, 58);
+  margin-bottom: 1%;
+}
+
+/* esto es la clase de la etiqueta span para la palabra Autos */
+.autos-negrita {
+  font-weight: bold;
+}
+
+.divNombre {
+  font-size: 3.3vh;
+  /* letter-spacing:0.5vw; */
+  /*la variante que se me ocurre es disminuir el espacio, para darle un toque diferente a la letra*/
+  color: rgb(20, 20, 20);
+  font-weight: 510;
+}
+
+
+.divTexto {
+  display: inline-flexbox;
+  text-align: right;
+  font-size: 2.4vh;
+}
+
+.producto:hover {
+  transform: scale(1.1);
+  animation-duration: 1ms;
+  transition: 0.4s;
+  background-color: rgba(231, 231, 231, 0.534);
+}
+/*FIN ESTILOS PRODUCT AUTOS*/
+
+
+
